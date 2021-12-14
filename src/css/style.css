@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.container{
+    background-color: #F7F7F7;
+    display: grid;
+    width: 656px;
+    height: 368px;
+    grid-row-gap:5px;
+    padding: 20px;
+    margin:20px auto;        
+    
+    grid: 
+    "video video  propaganda propaganda" 80px
+    "video video box-video1 box-video1" 80px
+    "content-video content-video box-video2 box-video2" 80px
+    "content-video content-video box-video3 box-video3" 80px;
+
+    
+}
+
+h2{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 2px;
+     
+}
+p{
+      
+    font-size: 11px;   
+    padding: 3px;
+          
+}
+
+.video{
+    display: grid;
+    grid-area:video;
+           
+}
+
+.content-video{
+    display: flex;
+    flex-direction: column;
+    grid-area: content-video;
+    justify-content: center;
+    align-items: flex-start;
+           
+
+}
+
+.propaganda{
+    display: flex;
+    grid-area:propaganda;
+    justify-content: center;
+                
+}
+.propaganda p {
+  
+  position: absolute;
+  align-self: center;  
+  transform: translatey(-50% );
+      
+}
+
+
+.box-video1{
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: column;       
+    grid-area: box-video1;
+   
+}
+
+
+
+.box-video2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;   
+    grid-area: box-video2;    
+   
+}
+
+
+.box-video3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;    
+    grid-area: box-video3;
+   
+}
+
+
+
+@media(max-width: 500px){
+
+    .container{
+        height: 100%;       
+        display: flex;
+        flex-direction: column;
+      
+    }
+
+    .content-video p{
+        width: 400px;
+    }
+    .propaganda {
+        
+        align-self: flex-start;
+        
+    }
+    .propaganda p{
+        transform: translateY(0);
+    }
+}
